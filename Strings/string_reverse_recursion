@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.String;
+public class reverse_string_recursion {
+    public static String reverse(String str){
+        if (str.length() == 0) {
+            return str;
+        }
+
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String org = sc.next();
+        String rev = reverse(org);
+        System.out.println(org);
+        System.out.print(rev);
+        
+    }
+}
